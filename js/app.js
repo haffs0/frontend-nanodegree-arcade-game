@@ -33,7 +33,7 @@ Enemy.prototype.render = function() {
 //enemy update
 function updateGameArea() {
     allEnemies.forEach(function(enemy) {
-        enemy.update(Math.random() * 4)
+        enemy.update(Math.random() * 8)
     });  
 }
   
