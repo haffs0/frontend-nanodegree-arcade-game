@@ -13,9 +13,6 @@ let Enemy = function(x, y) {
     this.interval = setInterval(updateGameArea, 50);
 };
 
-Enemy.prototype.stop = function() {
-    clearInterval(this.interval);
-}
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
@@ -72,10 +69,12 @@ Player.prototype.update = function() {
         }
     });
 };
+
 // Draw the player on the screen, required method for game
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
+
 //key movement for the player
 Player.prototype.handleInput = function(ev){ 
 
