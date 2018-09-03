@@ -67,7 +67,7 @@ Player.prototype.update = function() {
     allEnemies.forEach(function(enemy) {
         let xMeet = Math.abs(position.x - Math.floor(enemy.x));
         let yMeet = Math.abs(position.y - enemy.y);
-        if (xMeet < 70 && yMeet < 70) {
+        if (xMeet < 75 && yMeet < 75) {
             position.reset();
         }
     });
